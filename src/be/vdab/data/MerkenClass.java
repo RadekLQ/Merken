@@ -1,6 +1,7 @@
 package be.vdab.data;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class MerkenClass {
@@ -17,5 +18,15 @@ public class MerkenClass {
 
     public void keerOm() {
         automerken.sort((m1, m2) -> m2.compareTo(m1));
+//        Collections.reverse(automerken);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder autolist = new StringBuilder();
+        for (String merk : automerken) {
+            autolist.append(merk).append(" ");
+            }
+        return autolist.toString();
     }
 }
